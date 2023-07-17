@@ -3,6 +3,15 @@ entries:
   db-instances:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2023-07-17T10:05:56.939102273Z"
+    description: Database Instances for db operator
+    digest: 3a5be77dfb6b366f0c965f3403175ad3e52c604dc1043bb3d6f2167eddfd8f46
+    name: db-instances
+    urls:
+    - https://github.com/db-operator/charts/releases/download/db-instances-1.4.2/db-instances-1.4.2.tgz
+    version: 1.4.2
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2023-04-17T16:12:07.092409961Z"
     description: Database Instances for db operator
     digest: d3e8a34954629a41356163ef8241d23861779de07a139ded11f5639c45e9e0ab
@@ -186,4 +195,4 @@ entries:
     urls:
     - https://github.com/kloeckner-i/charts/releases/download/db-operator-1.2.7/db-operator-1.2.7.tgz
     version: 1.2.7
-generated: "2023-06-16T13:00:57.622628968Z"
+generated: "2023-07-17T10:05:56.939199474Z"
