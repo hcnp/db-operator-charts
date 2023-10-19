@@ -127,6 +127,32 @@ entries:
     - https://github.com/db-operator/charts/releases/download/db-operator-1.11.0/db-operator-1.11.0.tgz
     version: 1.11.0
   - apiVersion: v2
+    appVersion: 1.13.2
+    created: "2023-10-19T15:29:08.160961835+02:00"
+    description: The DB Operator creates databases and make them available in the
+      cluster via Custom Resource.
+    digest: 7979de298849fa031c77e764377901ff513222622cd97a6b9827dda0a8fd73f6
+    home: https://github.com/db-operator/db-operator
+    keywords:
+    - database
+    - Operator
+    - mysql
+    - postgres
+    kubeVersion: '>= 1.22-prerelease'
+    maintainers:
+    - email: allanger@zohomail.com
+      name: Nikolai Rodionov
+    name: db-operator
+    sources:
+    - https://github.com/db-operator/db-operator
+    - https://github.com/db-operator/cloudish-sql
+    - https://github.com/db-operator/pgdump-gcs
+    - https://github.com/db-operator/mydump-gcs
+    type: application
+    urls:
+    - https://github.com/db-operator/charts/releases/download/db-operator-1.10.2/db-operator-1.10.2.tgz
+    version: 1.10.2
+  - apiVersion: v2
     appVersion: 1.13.1
     created: "2023-09-07T08:54:19.67089812Z"
     description: The DB Operator creates databases and make them available in the
@@ -179,6 +205,32 @@ entries:
     - https://github.com/db-operator/charts/releases/download/db-operator-1.10.0/db-operator-1.10.0.tgz
     version: 1.10.0
   - apiVersion: v2
+    appVersion: 1.12.1
+    created: "2023-10-19T15:29:09.074559653+02:00"
+    description: The DB Operator creates databases and make them available in the
+      cluster via Custom Resource.
+    digest: 11e9a8750d5bee4ea84db862cd3a72583834bbeebc309c2db9a7440417faf6cc
+    home: https://github.com/db-operator/db-operator
+    keywords:
+    - database
+    - Operator
+    - mysql
+    - postgres
+    kubeVersion: '>= 1.22-prerelease'
+    maintainers:
+    - email: allanger@zohomail.com
+      name: Nikolai Rodionov
+    name: db-operator
+    sources:
+    - https://github.com/db-operator/db-operator
+    - https://github.com/db-operator/cloudish-sql
+    - https://github.com/db-operator/pgdump-gcs
+    - https://github.com/db-operator/mydump-gcs
+    type: application
+    urls:
+    - https://github.com/db-operator/charts/releases/download/db-operator-1.9.3/db-operator-1.9.3.tgz
+    version: 1.9.3
+  - apiVersion: v2
     appVersion: 1.12.0
     created: "2023-08-08T13:02:19.443821025Z"
     description: The DB Operator creates databases and make them available in the
@@ -227,6 +279,17 @@ entries:
     - https://github.com/db-operator/charts/releases/download/db-operator-1.9.0/db-operator-1.9.0.tgz
     version: 1.9.0
   - apiVersion: v2
+    appVersion: 1.11.1
+    created: "2023-10-19T15:29:08.760986559+02:00"
+    description: A Database Operator
+    digest: a42a25d358e8bf231887508b195e369e7d55b291cd0cfffa6b8e46c991cbe5ec
+    kubeVersion: '>= 1.21-prerelease'
+    name: db-operator
+    type: application
+    urls:
+    - https://github.com/db-operator/charts/releases/download/db-operator-1.8.1/db-operator-1.8.1.tgz
+    version: 1.8.1
+  - apiVersion: v2
     appVersion: 1.11.0
     created: "2023-04-18T04:11:41.714820998Z"
     description: A Database Operator
@@ -237,6 +300,17 @@ entries:
     urls:
     - https://github.com/db-operator/charts/releases/download/db-operator-1.8.0/db-operator-1.8.0.tgz
     version: 1.8.0
+  - apiVersion: v2
+    appVersion: 1.10.2
+    created: "2023-10-19T15:29:08.464943766+02:00"
+    description: A Database Operator
+    digest: 88acc0030e5635bf0c8108bc0499f04600a09a937047b24280fb08e83ef67061
+    kubeVersion: '>= 1.21-prerelease'
+    name: db-operator
+    type: application
+    urls:
+    - https://github.com/db-operator/charts/releases/download/db-operator-1.7.2/db-operator-1.7.2.tgz
+    version: 1.7.2
   - apiVersion: v2
     appVersion: 1.10.1
     created: "2023-04-17T16:12:07.247179645Z"
@@ -325,4 +399,4 @@ entries:
     urls:
     - https://github.com/kloeckner-i/charts/releases/download/db-operator-1.2.7/db-operator-1.2.7.tgz
     version: 1.2.7
-generated: "2023-09-29T07:02:47.846989378Z"
+generated: "2023-10-19T15:29:09.074684459+02:00"
