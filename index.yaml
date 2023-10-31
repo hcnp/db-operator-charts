@@ -75,6 +75,33 @@ entries:
     version: 1.3.0
   db-operator:
   - apiVersion: v2
+    appVersion: 1.16.1
+    created: "2023-10-31T09:17:44.133274074Z"
+    description: The DB Operator creates databases and make them available in the
+      cluster via Custom Resource.
+    digest: e2de65de0907e66140a3bbb8d8b6b81b1072c63749552c7c7e7b8aec9106804d
+    home: https://github.com/db-operator/db-operator
+    keywords:
+    - database
+    - Operator
+    - mysql
+    - postgres
+    kubeVersion: '>= 1.22-prerelease'
+    maintainers:
+    - email: allanger@zohomail.com
+      name: Nikolai Rodionov
+      url: https://badhouseplants.net
+    name: db-operator
+    sources:
+    - https://github.com/db-operator/db-operator
+    - https://github.com/db-operator/cloudish-sql
+    - https://github.com/db-operator/pgdump-gcs
+    - https://github.com/db-operator/mydump-gcs
+    type: application
+    urls:
+    - https://github.com/db-operator/charts/releases/download/db-operator-1.13.0/db-operator-1.13.0.tgz
+    version: 1.13.0
+  - apiVersion: v2
     appVersion: 1.15.4
     created: "2023-10-31T09:56:12.538156635+01:00"
     description: The DB Operator creates databases and make them available in the
@@ -479,4 +506,4 @@ entries:
     urls:
     - https://github.com/kloeckner-i/charts/releases/download/db-operator-1.2.7/db-operator-1.2.7.tgz
     version: 1.2.7
-generated: "2023-10-31T09:56:12.538239048+01:00"
+generated: "2023-10-31T09:17:44.133534474Z"
