@@ -1,8 +1,7 @@
----
 apiVersion: v2
 type: application
 name: db-operator
-version: 1.16.2
+version: 1.17.0
 # ---------------------------------------------------------------------------------
 # -- All supported k8s versions are in the test:
 # --  https://github.com/db-operator/charts/blob/main/.github/workflows/test.yaml
@@ -11,12 +10,10 @@ kubeVersion: ">= 1.22-prerelease"
 appVersion: "2.1.1"
 description: The DB Operator creates databases and make them available in the cluster via Custom Resource.
 home: https://github.com/db-operator/db-operator
-
 maintainers:
   - name: Nikolai Rodionov
     email: allanger@zohomail.com
     url: https://badhouseplants.net
-
 sources:
   - https://github.com/db-operator/db-operator
   - https://github.com/db-operator/cloudish-sql
