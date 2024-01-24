@@ -5,19 +5,22 @@ image:
   logLevel: info
 # imagePullSecrets:
 #   - name: myRegistrySecret
+
 reconcileInterval: "60"
 # watchNamespace value is comma-separated list of namespace names. It's necessary to set "" to watch cluster wide.
 watchNamespace: ""
+
 # ------------------------------------------------------------
-# -- If set to true, db-operator will check if a Kubernetes
-# --   objects were changes before running database queries.
+# -- If set to true, db-operator will check if Kubernetes
+# -- objects were changed before running database queries.
 # -- It might reduce the amount of queries, because otherwise
-# --  db-operator will try to update database and users every
-# --  ${RECONCILE_INTERVAL} seconds.
+# -- db-operator will try to update databases and users every
+# -- ${RECONCILE_INTERVAL} seconds.
 # ------------------------------------------------------------
 # -- NOTE: Currently, it's only working with Database Users
 # ------------------------------------------------------------
 checkForChanges: false
+
 rbac:
   create: true
 serviceAccount:
@@ -53,9 +56,25 @@ webhook:
       # -- ClusterIssuer or Issuer
       # -----------------------------------------
       kind: Issuer
-security: {}
-#  runAsUser: 1000
-#  fsGroup: 1000
+
+# -- Configure the security context for the operator pods
+podSecurityContext:
+  # Default Pod Security Standard for restricted
+  # https://kubernetes.io/docs/concepts/security/pod-security-admission/
+  runAsNonRoot: true
+  seccompProfile:
+    type: RuntimeDefault
+# runAsUser: 1000
+# fsGroup: 1000
+
+# -- Configure the security context for the operator container
+securityContext:
+  # Default Pod Security Standard for restricted
+  # https://kubernetes.io/docs/concepts/security/pod-security-admission/
+  allowPrivilegeEscalation: false
+  capabilities:
+    drop:
+      - ALL
 
 resources: {}
 nodeSelector: {}

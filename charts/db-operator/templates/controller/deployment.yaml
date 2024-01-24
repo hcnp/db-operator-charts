@@ -29,13 +29,16 @@ spec:
       {{- if .Values.serviceAccount.create }}
       serviceAccountName: {{ template "db-operator.serviceAccountName" . }}
       {{- end }}
-     {{- if .Values.security }}
+      {{- with .Values.podSecurityContext }}
       securityContext:
-        runAsUser: {{ .Values.security.runAsUser }}
-        fsGroup: {{ .Values.security.fsGroup }}
-     {{- end }}
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       containers:
         - name: operator
+          {{- with .Values.securityContext }}
+          securityContext:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
           image: "{{ .Values.image.repository }}:{{ template "github_packages_image_version" . }}"
           ports:
           - containerPort: 60000

@@ -1,5 +1,4 @@
 {{- if .Values.webhook.enabled }}
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -29,13 +28,16 @@ spec:
       {{- if .Values.webhook.serviceAccount.create }}
       serviceAccountName: {{ template "webhook.serviceAccountName" . }}
       {{- end }}
-     {{- if .Values.security }}
+      {{- with .Values.podSecurityContext }}
       securityContext:
-        runAsUser: {{ .Values.security.runAsUser }}
-        fsGroup: {{ .Values.security.fsGroup }}
-     {{- end }}
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       containers:
         - name: webhook
+          {{- with .Values.securityContext }}
+          securityContext:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
           image: "{{ .Values.image.repository }}:{{ template "github_packages_image_version" . }}"
           ports:
           - containerPort: 9443
